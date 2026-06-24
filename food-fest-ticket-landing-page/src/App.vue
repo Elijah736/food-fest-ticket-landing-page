@@ -1,25 +1,56 @@
 <template>
-  <div class="container">
-    <Header :wishlistCount="wishlist.length" />
+  <HeroSection />
 
-    <CourseList
-      :courses="tickets"
-      @save-course="Tickets"
-    />
-  </div>
+  <section id="tickets" class="tickets">
+    <h2>Choose Your Experience</h2>
+
+    <div class="ticket-grid">
+      <TicketCard
+        v-for="ticket in tickets"
+        :key="ticket.id"
+        :ticket="ticket"
+      />
+    </div>
+  </section>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import Header from './components/hero.vue';
-import Tickets from './components/tickets.vue';
-import tickets from './tickets';
+import HeroSection from './components/hero.vue'
+import TicketCard from './components/ticketlist.vue'
+import tickets from './tickets'
+</script>
 
-const wishlist = ref([])
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-function saveticket(id) {
-  if (!wishlist.value.includes(id)) {
-    wishlist.value.push(id)
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.tickets {
+  padding: 4rem 2rem;
+}
+
+.tickets h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ticket-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .ticket-grid {
+    grid-template-columns: 1fr;
   }
 }
-</script>
+</style>
