@@ -32,7 +32,7 @@
     </ul>
 
     <button class="buy-btn">
-      Coming Soon
+      Purchase
     </button>
   </div>
 </template>
@@ -66,12 +66,12 @@ function toggleFavorite() {
 }
 
 .featured {
-  border: 3px solid #ff9800;
+  border: 3px solid #fba004;
   transform: scale(1.05);
 }
 
 .badge {
-  background: #ff9800;
+  background: #fba004;
   color: white;
   padding: 6px 12px;
   border-radius: 20px;
@@ -99,7 +99,7 @@ function toggleFavorite() {
   width: 100%;
   padding: 12px;
   border: none;
-  background: #ff5722;
+  background: #fba004;
   color: white;
   border-radius: 8px;
   cursor: pointer;

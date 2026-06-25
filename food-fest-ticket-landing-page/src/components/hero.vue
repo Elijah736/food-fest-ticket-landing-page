@@ -2,7 +2,7 @@
   <section class="hero">
     <h1>🍔 Food Fest 2026</h1>
     <p>
-      Taste the world, one bite at a time.
+      May the food be with you.
     </p>
 
     <a href="#tickets">
@@ -17,7 +17,7 @@
   padding: 5rem 1rem;
   background: linear-gradient(
     135deg,
-    #ff7043,
+    #8f5a00,
     #ff9800
   );
   color: white;

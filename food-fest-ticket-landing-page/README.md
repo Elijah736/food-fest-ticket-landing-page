@@ -36,3 +36,6 @@ npm run dev
 ```sh
 npm run build
 ```
+### Brief Overview
+
+It's a responsive, component-based web application developed using Vue.js. The purpose was to promote and allow users to purchase different tickets. Each ticket displays its name, price, description and its benefits. Users are allowed to favorite a ticket by clicking on the heart in the top right corner of each ticket.
